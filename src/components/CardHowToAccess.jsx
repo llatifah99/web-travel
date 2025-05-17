@@ -1,16 +1,13 @@
-import { LayoutList } from "lucide-react";
-const CardHowToAccess = () => {
+const CardHowToAccess = ({ items }) => {
+  console.log(items);
   return (
     <>
-      <div>
-        <div>
-          <LayoutList />
+      {items.map((items) => (
+        <div key={items.id}>
+          <div>{items.icon}</div>
+          <p>{items.text}</p>
         </div>
-        <p>
-          Select the desired service and fill in the required details
-          accurately.
-        </p>
-      </div>
+      ))}
     </>
   );
 };
