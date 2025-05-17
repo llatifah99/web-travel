@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Menu, X, HandHeart, Zap } from "lucide-react";
 import WhyChooseUs from "./page/WhyChooseUs";
-import CardHowToAccess from "./components/CardHowToAccess";
+import HowToAccess from "./page/HowToAccess";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -102,7 +102,7 @@ function App() {
 
       {/* Konten tambahan */}
       <WhyChooseUs />
-      <CardHowToAccess />
+      <HowToAccess />
     </>
   );
 }
