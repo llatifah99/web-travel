@@ -1,41 +1,9 @@
 import { useState } from "react";
 import { Menu, X, HandHeart, Zap } from "lucide-react";
+import WhyChooseUs from "./page/WhyChooseUs";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
-  const CardWhyChooseUs = () => {
-    const reasons = [
-      {
-        icon: <HandHeart />,
-        text: "Reliable services with exceptional quality",
-      },
-      {
-        icon: <Zap />,
-        text: "Quick delivery and prompt response to your needs.",
-      },
-      {
-        icon: <HandHeart />,
-        text: "Reliable services with exceptional quality",
-      },
-      {
-        icon: <Zap />,
-        text: "Quick delivery and prompt response to your needs.",
-      },
-    ];
-    return (
-      <div>
-        <h1>Why Choose Us:</h1>
-        <div>
-          {reasons.map((reasons, index) => (
-            <div key={index}>
-              {reasons.icon}
-              <p>{reasons.text}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  };
   return (
     <>
       {/* Header Navigation */}
@@ -132,7 +100,7 @@ function App() {
       </div>
 
       {/* Konten tambahan */}
-      <CardWhyChooseUs></CardWhyChooseUs>
+      <WhyChooseUs />
     </>
   );
 }
