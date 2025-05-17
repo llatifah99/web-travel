@@ -7,7 +7,7 @@ const CardWhyChooseUs = ({ reasons }) => {
             key={reason.id}
             className="bg-blue-001541 rounded-xl p-6 flex flex-col items-center justify-center text-yellow-FFB729 text-center"
           >
-            <div className="mb-4 text-4xl">{reason.icon}</div>
+            <div className="mb-4">{reason.icon}</div>
             <p className="text-sm md:text-base">{reason.text}</p>
           </div>
         ))}
