@@ -29,10 +29,11 @@ const HowToAccess = () => {
         items-center
         text-left
         px-6
-        md:px-16"
+        md:px-16
+        py-16"
       >
-        <h1 className="pb-10 text-4xl font-bold text-yellow-FFB729 text-center">
-          How to Access Our Services
+        <h1 className="mb-8 text-4xl font-bold text-yellow-FFB729 text-center">
+          How to Access Our Services?
         </h1>
         <CardHowToAccess items={items} />
       </div>

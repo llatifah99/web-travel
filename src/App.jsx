@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Menu, X, HandHeart, Zap } from "lucide-react";
 import WhyChooseUs from "./page/WhyChooseUs";
 import HowToAccess from "./page/HowToAccess";
+import OurServices from "./page/OurServices";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -103,6 +104,7 @@ function App() {
       {/* Konten tambahan */}
       <WhyChooseUs />
       <HowToAccess />
+      <OurServices />
     </>
   );
 }
