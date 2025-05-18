@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       {/* Header Navigation */}
-      <header className="fixed top-0 left-0 w-full z-30 bg-[#b6c3ff] bg-opacity-10 px-6 md:px-16 py-4">
+      <header className="fixed top-0 left-0 w-full z-30 bg-black bg-opacity-20 px-6 md:px-16 py-4">
         <nav className="flex justify-between items-center text-white font-semibold">
           <div className="text-4xl font-bold text-yellow-400">
             Go<span className="text-blue-900">Cation</span>
