@@ -16,8 +16,23 @@ const OurServices = () => {
   ];
   return (
     <>
-      <h1>Our Services</h1>
-      <CardServices items={items} />
+      <div
+        className="bg-gray-D0D3D9
+        flex flex-col items-center justify-center
+        min-h-screen
+        bg-cover
+        bg-center
+        items-center
+        text-left
+        px-6
+        md:px-16
+        py-16"
+      >
+        <h1 className="mb-8 text-4xl font-bold text-blue-001541 text-center">
+          Our Services
+        </h1>
+        <CardServices items={items} />
+      </div>
     </>
   );
 };
