@@ -45,7 +45,7 @@ const CardPrice = ({ priceList }) => {
         {currentItems.map((item) => (
           <div
             key={item.id}
-            className="bg-blue-001541 text-yellow-FFB729 w-[280px] h-[340px] flex flex-col items-center px-6 py-12 rounded-xl"
+            className="bg-blue-001541 text-yellow-FFB729 w-[280px] h-[340px] flex flex-col items-center px-6 py-12 rounded-xl transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl overflow-hidden relative"
           >
             <h1 className="text-2xl mb-2">{item.title}</h1>
             <h2 className="text-5xl mb-4 font-bold">${item.price}</h2>
