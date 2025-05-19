@@ -3,29 +3,34 @@ const Price = () => {
   const priceList = [
     {
       id: 1,
-      title: "Hotel Booking",
-      price: 23,
-      features:
-        "Perfect for visa applications.Can be used for Schengen visas and all embassies.Return flight tickets.Flights to all countries worldwide.",
-    },
-    {
-      id: 2,
       title: "Flight Booking",
       price: 29,
       features:
-        "Perfect for visa applications.Can be used for Schengen visas and all embassies.Return flight tickets.Flights to all countries worldwide.",
+        "Perfect for visa applications.Can be used for Schengen visas and all embassies.Return flight tickets.Flights to all countries worldwide",
+    },
+    {
+      id: 2,
+      title: "Hotel Booking",
+      price: 29,
+      features:
+        "Perfect for visa applications.Can be used for Schengen visas and all embassies.Hotel reservations available worldwide",
     },
     {
       id: 3,
-      title: "Hotel Booking",
-      price: 30,
+      title: "Travel Insurance",
+      price: 24,
       features:
-        "Perfect for visa applications.Can be used for Schengen visas and all embassies.Return flight tickets.Flights to all countries worldwide.",
+        "$50,000 coverage with a $0 deductible.Available for countries worldwide",
+    },
+    {
+      id: 4,
+      title: "Travel Itinerary",
+      price: 39,
+      features:
+        "Accepted by all embassies for visa applications.Available for all countries.Enhances the acceptance rate of your visa",
     },
   ];
 
-  const poins = priceList[0].features.split(".");
-  console.log(poins);
   return (
     <>
       <div>
