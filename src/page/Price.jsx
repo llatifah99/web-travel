@@ -33,8 +33,21 @@ const Price = () => {
 
   return (
     <>
-      <div>
-        <h1>Our Prices</h1>
+      <div
+        className="bg-yellow-FFB729
+        flex flex-col items-center justify-center
+        min-h-screen
+        bg-cover
+        bg-center
+        items-center
+        text-left
+        px-6
+        md:px-16
+        py-16"
+      >
+        <h1 className="mb-8 text-4xl font-bold text-blue-001541 text-center">
+          Our Prices
+        </h1>
         <CardPrice priceList={priceList} />
       </div>
     </>
