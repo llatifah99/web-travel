@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Menu, X, HandHeart, Zap } from "lucide-react";
 import WhyChooseUs from "./page/WhyChooseUs";
 import HowToAccess from "./page/HowToAccess";
 import OurServices from "./page/OurServices";
 import Price from "./page/Price";
+import Typewriter from "typewriter-effect";
+import "./index.css";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,7 +41,6 @@ function App() {
               </a>
             </li>
           </ul>
-
           {/* Mobile Menu Toggle */}
           <button
             className="md:hidden text-white z-30 relative"
@@ -75,7 +76,6 @@ function App() {
           </ul>
         )}
       </header>
-
       {/* Hero Section */}
       <div
         id="hero"
@@ -90,9 +90,21 @@ function App() {
         {/* Konten Hero */}
         <div className="relative z-10 max-w-xl text-blue-001541">
           <h3 className="text-xl md:text-2xl font-medium">Search your next</h3>
-          <h1 className="text-4xl md:text-6xl font-bold uppercase">
+          <div className="text-4xl md:text-6xl font-bold uppercase">
+            <Typewriter
+              options={{
+                strings: ["Dream Vacation"],
+                autoStart: true,
+                loop: true,
+                delay: 300,
+                deleteSpeed: 100,
+                pauseFor: 1500,
+              }}
+            />
+          </div>
+          {/* <h1 className="text-4xl md:text-6xl font-bold uppercase">
             Dream Vacation
-          </h1>
+          </h1> */}
           <p className="text-md md:text-lg mt-2 mb-6">
             Explore beautiful destination around the world
           </p>
@@ -101,7 +113,6 @@ function App() {
           </button>
         </div>
       </div>
-
       {/* Konten tambahan */}
       <WhyChooseUs />
       <HowToAccess />
