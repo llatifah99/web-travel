@@ -1,9 +1,23 @@
 const Price = () => {
   const priceList = [
     {
-      key: 1,
+      id: 1,
       title: "Hotel Booking",
       price: 23,
+      features:
+        "Perfect for visa applications.Can be used for Schengen visas and all embassies.Return flight tickets.Flights to all countries worldwide.",
+    },
+    {
+      id: 2,
+      title: "Flight Booking",
+      price: 29,
+      features:
+        "Perfect for visa applications.Can be used for Schengen visas and all embassies.Return flight tickets.Flights to all countries worldwide.",
+    },
+    {
+      id: 3,
+      title: "Hotel Booking",
+      price: 30,
       features:
         "Perfect for visa applications.Can be used for Schengen visas and all embassies.Return flight tickets.Flights to all countries worldwide.",
     },
@@ -14,17 +28,17 @@ const Price = () => {
   return (
     <>
       <div>
-        <div>
-          <h1>{priceList[0].title}</h1>
-          <h2>${priceList[0].price}</h2>
-          <div>
+        {priceList.map((item) => (
+          <div key={item.id}>
+            <h1>{item.title}</h1>
+            <h2>${item.price}</h2>
             <ul>
-              {poins.map((item) => (
-                <li>{item}</li>
+              {item.features.split(".").map((poin, index) => (
+                <li key={index}>{poin}</li>
               ))}
             </ul>
           </div>
-        </div>
+        ))}
       </div>
     </>
   );
