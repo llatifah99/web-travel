@@ -3,6 +3,7 @@ import { Menu, X, HandHeart, Zap } from "lucide-react";
 import WhyChooseUs from "./page/WhyChooseUs";
 import HowToAccess from "./page/HowToAccess";
 import OurServices from "./page/OurServices";
+import Price from "./page/Price";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -105,6 +106,7 @@ function App() {
       <WhyChooseUs />
       <HowToAccess />
       <OurServices />
+      <Price></Price>
     </>
   );
 }
