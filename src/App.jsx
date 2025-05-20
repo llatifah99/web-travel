@@ -5,6 +5,7 @@ import HowToAccess from "./page/HowToAccess";
 import OurServices from "./page/OurServices";
 import Price from "./page/Price";
 import Gallery from "./page/Gallery";
+import Questions from "./page/Questions";
 import Typewriter from "typewriter-effect";
 import "./index.css";
 
@@ -120,6 +121,7 @@ function App() {
       <OurServices />
       <Price></Price>
       <Gallery></Gallery>
+      <Questions />
     </>
   );
 }
