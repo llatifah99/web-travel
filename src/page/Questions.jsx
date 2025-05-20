@@ -14,13 +14,35 @@ const Questions = () => {
   const items = [
     {
       id: 1,
-      question: "Are the documents accepted?",
-      answer: "of course the documents are accepted in every country",
+      question:
+        "Are the documents accepted by European embassies and visa processing offices?",
+      answer:
+        "Yes, our documents are fully accepted by all embassies and visa processing offices, adhering to the required standards by organizations like: VFS - BLS-TLS",
     },
     {
       id: 2,
-      question: "Are You Okay?",
-      answer: "I'm Okayy",
+      question: "How long does it take for my documents to be delivered?",
+      answer: "Up to 12 hours",
+    },
+    {
+      id: 3,
+      question: "How will I receive the requested documents?",
+      answer:
+        "You will receive your documents in the email you provided during the order process",
+    },
+    {
+      id: 4,
+      question:
+        "Is it necessary to obtain paid flight tickets and a paid hotel reservation to apply for the visa?",
+      answer:
+        "No, it’s sufficient to have confirmed but unpaid flight and hotel reservations for the visa application. Once the visa is granted, you can proceed with actual bookings.",
+    },
+    {
+      id: 5,
+      question:
+        "Can you provide flight and hotel reservations for visa applications to any country worldwide?",
+      answer:
+        "Yes, we offer flight and hotel reservations for visa applications to any country. Embassies and consulates worldwide require these reservations, and our services are not limited to the Schengen Area.",
     },
   ];
   return (
