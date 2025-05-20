@@ -1,4 +1,10 @@
-import { Carousel } from "@material-tailwind/react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 const Gallery = () => {
   const photos = [
     {
@@ -23,45 +29,51 @@ const Gallery = () => {
     },
     {
       id: 6,
-      link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ723RE5cFTHhj5svi6eWzzNCHJDD0tX0VYXg&s",
+      link: "https://images.ctfassets.net/1aemqu6a6t65/46MJ6ER585Rwl3NraEIoGL/784c5eb5d87f576b5548b1a2255f08e7/tripadvisortimessquare_taggeryanceyiv_5912?w=1200&h=800&q=75",
     },
     {
       id: 7,
-      link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ723RE5cFTHhj5svi6eWzzNCHJDD0tX0VYXg&s",
+      link: "https://cf-images.ap-southeast-2.prod.boltdns.net/v1/static/1634657702001/66962544-e259-4ba2-9413-72deb9ea2fee/b654725d-78e9-4542-9572-f7bd2f72d0af/1280x720/match/image.jpg",
     },
   ];
+
   return (
-    <>
-      <div
-        className="bg-gray-D0D3D9
-        flex flex-col items-center justify-center
-        min-h-screen
-        bg-cover
-        bg-center
-        items-center
-        text-left
-        px-6
-        md:px-16
-        py-16"
-      >
-        <h1 className="mb-8 text-4xl font-bold text-blue-001541 text-center">
-          Gallery
-        </h1>
-        <div className="w-full">
-          <Carousel loop={true} autoplay={true}>
-            {photos.map((photo) => (
-              <div key={photo.id} className="mx-4">
-                <img
-                  src={photo.link}
-                  alt={`photo-${photo.id}`}
-                  className="h-[500px] w-[420px] object-cover object-center rounded-xl"
-                />
-              </div>
-            ))}
-          </Carousel>
-        </div>
+    <div className="bg-gray-100 min-h-screen flex flex-col items-center justify-center py-16 px-6">
+      <h1 className="text-4xl font-bold text-blue-900 mb-8 text-center">
+        Gallery
+      </h1>
+      <div className="w-full max-w-6xl">
+        <Swiper
+          spaceBetween={20}
+          loop={true}
+          autoplay={{ delay: 3000 }}
+          pagination={{ clickable: true }}
+          navigation={true}
+          modules={[Autoplay, Pagination, Navigation]}
+          breakpoints={{
+            0: {
+              slidesPerView: 1,
+            },
+            640: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          }}
+        >
+          {photos.map((photo) => (
+            <SwiperSlide key={photo.id}>
+              <img
+                src={photo.link}
+                alt={`photo-${photo.id}`}
+                className="h-[400px] w-full object-cover rounded-xl"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
-    </>
+    </div>
   );
 };
 
