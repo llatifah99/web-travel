@@ -4,6 +4,7 @@ import WhyChooseUs from "./page/WhyChooseUs";
 import HowToAccess from "./page/HowToAccess";
 import OurServices from "./page/OurServices";
 import Price from "./page/Price";
+import Gallery from "./page/Gallery";
 import Typewriter from "typewriter-effect";
 import "./index.css";
 
@@ -118,6 +119,7 @@ function App() {
       <HowToAccess />
       <OurServices />
       <Price></Price>
+      <Gallery></Gallery>
     </>
   );
 }
