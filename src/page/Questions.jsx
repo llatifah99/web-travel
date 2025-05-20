@@ -52,13 +52,13 @@ const Questions = () => {
         <h1 className="pt-24 pb-10 text-4xl font-bold text-blue-001541 text-center">
           Q&A
         </h1>
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center text-blue-001541">
           {items.map((item) => (
             <div key={item.id} className="max-w-6xl w-full my-2 rounded-xl">
               {/* function dipanggil ketika button diberi aksi "klik" */}
               <button
                 onClick={() => handleClick(item.id)}
-                className="w-full py-2 px-4 bg-gray-D0D3D9 rounded-xl text-left flex justify-between items-center"
+                className="w-full py-2 px-4 bg-yellow-FFB729 rounded-xl  font-bold text-left flex justify-between items-center"
               >
                 {item.question}
                 <ChevronDown />
