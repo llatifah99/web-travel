@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 const Questions = () => {
   // simpan id dalam bentuk array
   const [openIds, setOpenIds] = useState([]);
@@ -24,18 +25,29 @@ const Questions = () => {
   ];
   return (
     <>
-      <div>
-        <h1>Q&A</h1>
-        {items.map((item) => (
-          <div key={item.id}>
-            {/* function dipanggil ketika button diberi aksi "klik" */}
-            <button onClick={() => handleClick(item.id)}>
-              {item.question}
-            </button>
-            {/* conditional rendering and */}
-            {openIds.includes(item.id) && <p>{item.answer}</p>}
-          </div>
-        ))}
+      {/* bg-gray-D0D3D9 */}
+      <div className="bg-gray-100 min-h-screen bg-cover bg-center items-center text-left pb-24 px-6 md:px-16">
+        <h1 className="pt-24 pb-10 text-4xl font-bold text-blue-001541 text-center">
+          Q&A
+        </h1>
+        <div className="flex flex-col items-center justify-center">
+          {items.map((item) => (
+            <div key={item.id} className="max-w-6xl w-full my-2 rounded-xl">
+              {/* function dipanggil ketika button diberi aksi "klik" */}
+              <button
+                onClick={() => handleClick(item.id)}
+                className="w-full py-2 px-4 bg-gray-D0D3D9 rounded-xl text-left flex justify-between items-center"
+              >
+                {item.question}
+                <ChevronDown />
+              </button>
+              {/* conditional rendering and */}
+              {openIds.includes(item.id) && (
+                <p className="px-4 py-2">{item.answer}</p>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </>
   );
