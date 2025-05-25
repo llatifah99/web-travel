@@ -15,9 +15,7 @@ const AboutUs = ({ id }) => {
           className="w-full h-auto rounded-xl object-cover shadow-md"
         />
         <div className="flex flex-col justify-center">
-          <h2 className="text-3xl font-bold mb-4 text-gray-800">
-            Tentang Kami
-          </h2>
+          <h2 className="text-3xl font-bold mb-4 text-gray-800">About Us</h2>
           <p className="text-gray-700 mb-4 leading-relaxed">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
             repellendus in molestiae dolorum! Aliquam perferendis culpa minima
