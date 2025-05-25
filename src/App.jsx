@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X, HandHeart, Zap } from "lucide-react";
+import AboutUs from "./page/AboutUs";
 import WhyChooseUs from "./page/WhyChooseUs";
 import HowToAccess from "./page/HowToAccess";
 import OurServices from "./page/OurServices";
@@ -24,22 +25,26 @@ function App() {
           {/* Desktop Menu */}
           <ul className="hidden md:flex space-x-16 text-white text-xl">
             <li>
-              <a href="#" className="hover:text-blue-00317E">
+              <a href="#hero" className="hover:text-blue-00317E">
                 Home
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-00317E">
+              <a href="#about" className="hover:text-blue-00317E">
                 About us
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-00317E">
+              <a href="#services" className="hover:text-blue-00317E">
                 Services
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-blue-00317E">
+              <a
+                href="https://chat.whatsapp.com/"
+                className="hover:text-blue-00317E"
+                target="_blank"
+              >
                 Contact Us
               </a>
             </li>
@@ -57,22 +62,26 @@ function App() {
         {isOpen && (
           <ul className="md:hidden mt-4 space-y-4 text-white bg-black bg-opacity-80 p-6 rounded shadow-lg z-30 relative">
             <li>
-              <a href="#" className="block hover:text-blue-00317E">
+              <a href="#hero" className="block hover:text-blue-00317E">
                 Home
               </a>
             </li>
             <li>
-              <a href="#" className="block hover:text-blue-00317E">
+              <a href="#about" className="block hover:text-blue-00317E">
                 About us
               </a>
             </li>
             <li>
-              <a href="#" className="block hover:text-blue-00317E">
+              <a href="#services" className="block hover:text-blue-00317E">
                 Services
               </a>
             </li>
             <li>
-              <a href="#" className="block hover:text-blue-00317E">
+              <a
+                href="https://chat.whatsapp.com/"
+                className="block hover:text-blue-00317E"
+                target="_blank"
+              >
                 Contact Us
               </a>
             </li>
@@ -117,9 +126,10 @@ function App() {
         </div>
       </div>
       {/* Konten tambahan */}
+      <AboutUs id="about" />
       <WhyChooseUs />
       <HowToAccess />
-      <OurServices />
+      <OurServices id="services" />
       <Price></Price>
       <Gallery></Gallery>
       <Questions />

@@ -1,5 +1,5 @@
 import CardServices from "../components/CardServices";
-const OurServices = () => {
+const OurServices = ({ id }) => {
   const items = [
     {
       id: 1,
@@ -28,6 +28,7 @@ const OurServices = () => {
   return (
     <>
       <div
+        id={id}
         className="bg-gray-D0D3D9
         flex flex-col items-center justify-center
         min-h-screen
